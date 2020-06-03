@@ -1,0 +1,27 @@
+{
+    "name": "theExpressJWT",
+    "version": "1.0.0",
+    "description": "Node express and JWT ",
+    "main": "app.js",
+    "author": "Dax Code ",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "config": "^3.3.1",
+        "express": "^4.17.1",
+        "express-validator": "^6.5.0",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.9.17"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.10.2",
+        "@babel/node": "^7.10.1",
+        "@babel/preset-env": "^7.10.2",
+        "nodemon": "^2.0.4"
+    },
+    "scripts": {
+        "start": "node --exec babel-node app.js",
+        "serve": "nodemon --exec babel-node app.js"
+    }
+
+}
