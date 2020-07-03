@@ -1,3 +1,5 @@
+/** @format */
+
 import User from '../model/User';
 import { genSalt, hash, compare } from 'bcrypt';
 import { sign } from 'jsonwebtoken';
@@ -18,7 +20,10 @@ const register = async (req, res) => {
 		const userData = await user.save();
 		res.json(userData);
 	} catch (error) {
-		res.json({ err: error });
+		res.json({
+			err: { name: error.name },
+			Key: error.keyValue,
+		});
 	}
 };
 
